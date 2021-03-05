@@ -5,13 +5,11 @@
       <key>Description</key>
       <string>Downloads latest Atom zip file and builds a package. The installer package includes a preinstall script that will check for an existing Atom.app in /Applications and remove it if found. It also contains a postinstall script which configures automatic Chrome updates for all users.</string>
       <key>Identifier</key>
-      <string>corp.sap.maccoe.pkg.atom</string>
+      <string>net.trouton.pkg.atom</string>
       <key>Input</key>
       <dict>
          <key>NAME</key>
          <string>Atom</string>
-         <key>PACKAGER</key>
-         <string>SAPCorp</string>
          <key>VENDOR</key>
          <string>GitHub</string>
          <key>SOFTWARETITLE</key>
@@ -80,7 +78,7 @@
                <key>pkg_request</key>
                <dict>
                   <key>pkgname</key>
-                  <string>%PACKAGER%_%VENDOR%_%SOFTWARETITLE%_%version%</string>
+                  <string>%VENDOR%_%SOFTWARETITLE%_%version%</string>
                   <key>version</key>
                   <string>%version%</string>
                   <key>id</key>
@@ -109,7 +107,7 @@
             <key>Arguments</key>
             <dict>
                <key>pkg_path</key>
-               <string>%RECIPE_CACHE_DIR%/%PACKAGER%_%VENDOR%_%SOFTWARETITLE%_%version%.pkg</string>
+               <string>%RECIPE_CACHE_DIR%/%VENDOR%_%SOFTWARETITLE%_%version%.pkg</string>
                <key>signing_cert</key>
                <string>%SIGNINGCERTIFICATE%</string>
             </dict>
